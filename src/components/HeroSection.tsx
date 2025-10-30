@@ -26,11 +26,7 @@ export function HeroSection() {
                   </>
                 )}
               </h1>
-              <p className="text-xl text-[#302325] leading-relaxed">
-                {language === "es"
-                  ? "Automatiza análisis, optimiza tus procesos y toma decisiones inteligentes con StockWise. La plataforma de gestión de inventario que tu negocio necesita."
-                  : "Automate analytics, optimize your processes, and make smart decisions with StockWise. The inventory management platform your business needs."}
-              </p>
+              
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">

@@ -22,6 +22,11 @@ export function Footer() {
               className="w-18 h-12 object-contain" 
             />
           </div>
+
+          <p className="max-w-lg text-center text-base leading-relaxed text-gray-500">
+            Simplificando el inventario para que los pequeños negocios de
+            Latinoamérica puedan crecer.
+          </p>
           
           {/* Social Links */}
           <div className="flex space-x-6">

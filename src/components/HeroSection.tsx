@@ -3,6 +3,7 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useLanguage } from "../context/LanguageContext";
 
 export function HeroSection() {
+  const registerHref = "https://stocktrack-frontend.vercel.app/auth/register";
   const { language } = useLanguage();
 
   return (
@@ -31,10 +32,13 @@ export function HeroSection() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                asChild
                 size="lg" 
                 className="bg-[#EE7F27] hover:bg-[#8C162A] text-white text-lg px-8 py-6"
               >
-                {language === "es" ? "Comenzar Gratis" : "Start Free"}
+                <a href={registerHref} target="_blank" rel="noreferrer">
+                  {language === "es" ? "Comenzar Gratis" : "Start Free"}
+                </a>
               </Button>
             </div>
           </div>

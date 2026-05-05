@@ -3,6 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { Globe } from "lucide-react";
 
 export function Header() {
+  const registerHref = "https://stocktrack-frontend.vercel.app/auth/register";
   const { language, setLanguage } = useLanguage();
 
   // Alternar idioma
@@ -39,8 +40,10 @@ export function Header() {
             <Button variant="outline" className="hidden sm:inline-flex">
               {language === "es" ? "Iniciar Sesión" : "Sign In"}
             </Button>
-            <Button className="bg-[#EE7F27] hover:bg-[#8C162A] text-white">
-              {language === "es" ? "Prueba Gratis" : "Free Trial"}
+            <Button asChild className="bg-[#EE7F27] hover:bg-[#8C162A] text-white">
+              <a href={registerHref} target="_blank" rel="noreferrer">
+                {language === "es" ? "Prueba Gratis" : "Free Trial"}
+              </a>
             </Button>
             <button
               onClick={toggleLanguage}

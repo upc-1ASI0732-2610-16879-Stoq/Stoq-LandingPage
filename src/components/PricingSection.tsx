@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 
 export function PricingSection() {
+  const registerHref = "https://stocktrack-frontend.vercel.app/auth/register";
   const { language } = useLanguage();
 
   const plans = [
@@ -134,13 +135,16 @@ export function PricingSection() {
               </ul>
               
               <Button 
+                asChild
                 className={`w-full py-3 ${
                   plan.popular 
                     ? 'bg-[#EE7F27] hover:bg-[#8C162A] text-white' 
                     : 'bg-[#302325] hover:bg-[#8C162A] text-white'
                 }`}
               >
-                {plan.buttonText}
+                <a href={registerHref} target="_blank" rel="noreferrer">
+                  {plan.buttonText}
+                </a>
               </Button>
             </div>
           ))}

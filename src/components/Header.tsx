@@ -3,7 +3,9 @@ import { useLanguage } from "../context/LanguageContext";
 import { Globe } from "lucide-react";
 
 export function Header() {
-  const registerHref = "https://stocktrack-frontend.vercel.app/auth/register";
+  const registerHref = "stoqfrontendweb-git-main-fabs-in-spaces-projects.vercel.app/auth/register";
+  const loginHref = "stoqfrontendweb-git-main-fabs-in-spaces-projects.vercel.app/auth/login";
+
   const { language, setLanguage } = useLanguage();
 
   // Alternar idioma
@@ -38,6 +40,7 @@ export function Header() {
           
           <div className="flex items-center space-x-4">
             <Button variant="outline" className="hidden sm:inline-flex">
+              <a href={loginHref} target="_blank" rel="noreferrer">
               {language === "es" ? "Iniciar Sesión" : "Sign In"}
             </Button>
             <Button asChild className="bg-[#EE7F27] hover:bg-[#8C162A] text-white">
